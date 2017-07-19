@@ -26,6 +26,9 @@ map property id's to the correct fields.  PropertyMapping.xml should be formatte
 ```
 In order for the DLL to know which IDs to use for the ConnectionString, SQLStatement, and ReturnValue you must pass the WorkflowID to the assembly. This is accomplished by creating a process field in your GlobalAction or GlobalCapture workflow and setting the value of that process field to WorkflowID=SAMPLE. The left side of the equal sign is Case Sensitive. The right side of the equal sign is not. So WorkflowID=Sample will match and give you the correct values from PropertyMapping.xml, but workflowid=SAMPLE will not.
 
+***IMPORTANT***
+The literal text "WorkflowID=" must be specified in the process field described above.  The process field's name can be anything you choose to make it.  The value of the process field must be the text "WorkflowID=" followed by the actual value in the WorkflowID element of the XML file.
+
 If the system cannot find the WorkflowID in the process fields the batch will error out and tell you that the WorkflowID was not found in the Workflow Fields. If the WorkflowID is not found in the PropertyMapping.xml file, the batch will error and let you know that it was not found in PropertyMapping.xml.
 
 This is a quick and useful way to pull data from a SQL database using a document's index data in a GlobalAction workflow.
