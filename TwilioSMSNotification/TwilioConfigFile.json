@@ -1,0 +1,24 @@
+{
+  "NotifyFields": [
+    2,
+    3
+  ],
+  "CustomMessage": "Please log into GlobalSearch to take action.",
+  "Users": {
+    "1": {
+      "ID": 1,
+      "Name": "Pete",
+      "PhoneNumber": "+12345678901"
+    },
+    "2": {
+      "ID": 2,
+      "Name": "Ron",
+      "PhoneNumber": "+13456789012"
+    },
+    "3": {
+      "ID": 3,
+      "Name": "Jeff",
+      "PhoneNumber": "+14567890123"
+    }
+  }
+}
