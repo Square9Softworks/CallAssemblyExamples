@@ -13,6 +13,9 @@ First and foremost you will need an account with [Twilio][1]. Once you have crea
 <add key="TwilioAuthToken" value="Your account AuthToken from your twilio account homepage" />
 <add key="TwilioPhoneNumber" value="The phone number (including country code) to send texts from that your twilio account owns." />
 ```
+
+**IMPORTANT NOTE: This and all phone numbers in code and config files MUST include country code**
+
 Update the values with the correct information from your Twilio account as denoted above. For more information, see [Twilio QuickStart guide for SMS with c#](https://www.twilio.com/docs/sms/quickstart/csharp-dotnet-framework)
 
 #### TwilioConfigFile.json
