@@ -43,7 +43,7 @@ returns the SQL query's result as the third Property's value.
 ***GLOBALACTION ONLY FEATURE***
 Call Assembly functions in GlobalAction have system variables that are alway present for Database, Document, and Archive ID values.  When writing a Call Assembly, you can leverage these variables in any way you see fit by referencing DATABASEID, DOCUMENTID, or ARCHIVEID keys in the input dictionary.  In the SQL call assembly, these varables are used to dynamically provide information about a specific document to the SQL Query.  The SQL Call Assembly code looks for a specific string and replaces it with one of the system variables. This allows the SQL code to work against a specific document. The logic starts on line 84 of the SQLSelectQuery.cs code file.  Note the way the system variables are used in this case is specific to the needs of this call assembly.  Your own call assembly logic would need to be built for other applications and use cases.  The replacement string values for THIS SPECIFIC USE CASE are #ARCHIVEID#, #DOCUMENTID#, and #DATABASEID#.  As an example, you may wish to calculate a value from two numeric fields in a document.  This SQL would look like this:
 
-select field1 + field2 from ssfields where archiveid = #ARCHIVEID# and docid = #DOCUMENTID#
+select field1 + field2 from ssfields where archiveid = #ARCHIVEID# and docid = #DOCID#
 
 To support 
 
